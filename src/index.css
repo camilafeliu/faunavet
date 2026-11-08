@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #343b36;
+  background-color: #fafaf6;
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fafaf6;
+  color: #343b36;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.section-shell {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-title {
+  @apply mb-4 text-3xl font-bold text-jungle md:text-4xl;
+}
+
+.section-subtitle {
+  @apply mb-10 max-w-2xl text-base text-charcoal/80 md:text-lg;
+}
+
+.primary-button {
+  @apply inline-flex items-center justify-center rounded-full bg-jungle px-6 py-3 text-sm font-semibold text-white transition hover:bg-forest focus:outline-none focus:ring-2 focus:ring-jungle/30;
+}
+
+.secondary-button {
+  @apply inline-flex items-center justify-center rounded-full border border-jungle/30 bg-white px-6 py-3 text-sm font-semibold text-jungle transition hover:bg-sage/10 focus:outline-none focus:ring-2 focus:ring-jungle/20;
+}
+
+.soft-card {
+  @apply rounded-3xl border border-jungle/10 bg-white shadow-soft;
+}
+
+.nav-link {
+  @apply text-sm font-medium text-charcoal transition hover:text-jungle;
+}
+
+.icon-badge {
+  @apply flex h-12 w-12 items-center justify-center rounded-2xl bg-sage/20 text-xl text-jungle;
+}
+
+.grid-overlay {
+  background-image: linear-gradient(rgba(23, 76, 60, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(23, 76, 60, 0.02) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.reveal {
+  animation: fadeUp 0.7s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-grid img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    @apply text-2xl;
+  }
+}
